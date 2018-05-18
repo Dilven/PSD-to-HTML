@@ -16,7 +16,7 @@
 
 <body>
   <header class="site-header">
-    <img class="site-logo" title="logo-masteralb" src="assets/logo.png" alt="logo-masteralb" />
+    <img class="site-logo" title="logo-masteralb" src="assets/logo.png" alt="logo with lizard-masteralb" />
   </header>
   <main class="main-container">
     <article class="col">
@@ -24,24 +24,45 @@
       <div class="form-wrapper">
         <form class="form">
           <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+            <label for="register-username">
+              <span class="form-icon fas fa-user" aria-label="User name"></span>
+            </label>
+            <input class="input" type="text" id="register-username" placeholder="Username">
           </div>
           <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+            <label for="register-password">
+              <span class="form-icon fas fa-lock" aria-label="password"></span>
+            </label>
+            <input class="input" type="text" id="register-password" placeholder="Password">
           </div>
           <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+            <label for="register-confim-password">
+              <span class="form-icon fas fa-lock" aria-label="Confim-Password"></span>
+            </label>
+            <input class="input" type="text" id="register-confim-password" placeholder="Confim-Password">
           </div>
           <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+            <label for="register-email">
+              <span class="form-icon fas fa-envelope" aria-label="Email"></span>
+            </label>
+            <input class="input" type="text" id="register-email" placeholder="Email">
           </div>
           <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+            <label for="register-location">
+              <span class="form-icon fas fa-map-marker" aria-label="Your Location"></span>
+            </label>
+            <select class="input" required id="register-location">
+                <option value="" disabled selected hidden>Your Location</option>
+                <option value="sosnowiec">Sosnowiec</option>
+                <option value="warszawa">Warszawa</option>
+                <option value="Wroclaw">Wrocław</option>
+                <option value="Krakow">Kraków</option>
+            </select>
+          </div>
+          <div class="submit-form-wrapper">
+            <input type="checkbox" id="accept-terms">
+            <label for="accept-terms">I have read and accept the terms of use.</label>
+            <button class="button button_submit" type="submit">Sign up</button>
           </div>
         </form>
       </div>
@@ -49,75 +70,92 @@
       <div class="form-wrapper">
         <form class="form">
           <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+            <label for="send-email-name">
+              <span class="form-icon fas fa-user" aria-label="Your name"></span>
+            </label>
+            <input class="input" type="text" id="send-email-name" placeholder="Your name">
           </div>
           <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+            <label for="send-email-email">
+              <span class="form-icon fas fa-envelope" aria-label="Your email"></span>
+            </label>
+            <input class="input" type="text" id="send-email-email" placeholder="Your Email">
           </div>
-
+          <div class="text-area-wrapper">
+            <label for="send-email-message" aria-label="your message"></label>
+            <textarea rows="10" placeholder="Type your message..." id="send-email-message"></textarea>
+          </div>
+          <div class="submit-form-wrapper">
+            <input type="checkbox" id="accept-copy">
+            <label for="accept-copy">Send a copy to my Email.</label>
+            <button class="button button_submit" type="submit">Send Email</button>
+          </div>
         </form>
       </div>
-
     </article>
 
     <article class="col">
-      <h2 class="form-name">Register Form</h2>
+      <h2 class="form-name">Sign In Form</h2>
       <div class="form-wrapper">
         <form class="form">
           <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+            <label for="sign-in-username">
+              <span class="form-icon fas fa-user" aria-label="User name"></span>
+            </label>
+            <input class="input" type="text" id="sign-in-username" placeholder="Username">
           </div>
           <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+            <label for="sign-in-password">
+              <span class="form-icon fas fa-lock" aria-label="password"></span>
+            </label>
+            <input class="input" type="text" id="sign-in-password" placeholder="Password">
           </div>
-          <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
-          </div>
-          <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
-          </div>
-          <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+          <div class="submit-form-wrapper">
+            <input type="checkbox" id="remember-email">
+            <label for="remember-email">Remember me</label>
+            <button class="button button_submit button_small" type="submit">Sign in</button>
           </div>
         </form>
       </div>
-      <h2 class="form-name">Send Email</h2>
+      <h2 class="form-name">Recovery Form</h2>
       <div class="form-wrapper">
         <form class="form">
           <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+            <label for="recovery-email">
+              <span class="form-icon fas fa-envelope" aria-label="Enter your Email"></span>
+            </label>
+            <input class="input" type="text" id="recovery-email" placeholder="Enter your Email">
           </div>
           <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+            <label for="recovery-phone">
+              <span class="form-icon fas fa-mobile-alt" aria-label="Enter your Phone number"></span>
+            </label>
+            <input class="input" type="text" id="recovery-phone" placeholder="Enter your Phone number">
           </div>
-
+          <div class="submit-form-wrapper">
+            <button class="button button_submit button_small button_nomargin" type="submit">Send</button>
+            <button class="button button_submit button_small">Done</button>
+          </div>
         </form>
       </div>
-      <h2 class="form-name">Send Email</h2>
+      <h2 class="form-name">Subscribe Form</h2>
       <div class="form-wrapper">
         <form class="form">
           <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+            <label for="subscribe-email">
+              <span class="form-icon fas fa-envelope" aria-label="Enter your Email"></span>
+            </label>
+            <input class="input" type="text" id="subscribe-email" placeholder="Enter your Email">
           </div>
-          <div class="input-wrapper">
-            <span class="form-icon fas fa-user" aria-label="User name"></span>
-            <input>
+          <div class="submit-form-wrapper">
+            <button class="button button_submit button_small button_nomargin" type="submit">Subscribe</button>
+            <button class="button button_submit button_small button_cancel">No thanks</button>
           </div>
-
         </form>
       </div>
-      <footer>
-
+      <footer class="article-footer">
+        <img class="site-logo" title="logo-masteralb" src="assets/logo.png" alt="logo with lizard-masteralb" />
+        <img title="address to site" src="assets/link.svg" alt="address to site" />
       </footer>
     </article>
   </main>
