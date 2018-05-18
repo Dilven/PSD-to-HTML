@@ -11,7 +11,6 @@
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   <script src="index.js"></script>
-
 </head>
 
 <body>
@@ -27,41 +26,43 @@
             <label for="register-username">
               <span class="form-icon fas fa-user" aria-label="User name"></span>
             </label>
-            <input class="input" type="text" id="register-username" placeholder="Username">
+            <input class="input" required required type="text" id="register-username" placeholder="Username">
           </div>
           <div class="input-wrapper">
             <label for="register-password">
               <span class="form-icon fas fa-lock" aria-label="password"></span>
             </label>
-            <input class="input" type="text" id="register-password" placeholder="Password">
+            <input class="input" required required type="text" id="register-password" placeholder="Password">
           </div>
           <div class="input-wrapper">
             <label for="register-confim-password">
               <span class="form-icon fas fa-lock" aria-label="Confim-Password"></span>
             </label>
-            <input class="input" type="text" id="register-confim-password" placeholder="Confim-Password">
+            <input class="input" required required type="text" id="register-confim-password" placeholder="Confim-Password">
           </div>
           <div class="input-wrapper">
             <label for="register-email">
               <span class="form-icon fas fa-envelope" aria-label="Email"></span>
             </label>
-            <input class="input" type="text" id="register-email" placeholder="Email">
+            <input class="input" required required type="email" id="register-email" placeholder="Email">
           </div>
           <div class="input-wrapper">
             <label for="register-location">
               <span class="form-icon fas fa-map-marker" aria-label="Your Location"></span>
             </label>
             <select class="input" required id="register-location">
-                <option value="" disabled selected hidden>Your Location</option>
-                <option value="sosnowiec">Sosnowiec</option>
-                <option value="warszawa">Warszawa</option>
-                <option value="Wroclaw">Wrocław</option>
-                <option value="Krakow">Kraków</option>
+              <option value="" disabled selected hidden>Your Location</option>
+              <option value="sosnowiec">Sosnowiec</option>
+              <option value="warszawa">Warszawa</option>
+              <option value="Wroclaw">Wrocław</option>
+              <option value="Krakow">Kraków</option>
             </select>
           </div>
           <div class="submit-form-wrapper">
-            <input type="checkbox" id="accept-terms">
-            <label for="accept-terms">I have read and accept the terms of use.</label>
+            <div class="checkbox-wrapper">
+              <input required type="checkbox" id="accept-terms">
+              <label for="accept-terms">I have read and accept the terms of use.</label>
+            </div>
             <button class="button button_submit" type="submit">Sign up</button>
           </div>
         </form>
@@ -73,27 +74,28 @@
             <label for="send-email-name">
               <span class="form-icon fas fa-user" aria-label="Your name"></span>
             </label>
-            <input class="input" type="text" id="send-email-name" placeholder="Your name">
+            <input class="input" required type="text" id="send-email-name" placeholder="Your name">
           </div>
           <div class="input-wrapper">
             <label for="send-email-email">
               <span class="form-icon fas fa-envelope" aria-label="Your email"></span>
             </label>
-            <input class="input" type="text" id="send-email-email" placeholder="Your Email">
+            <input class="input" required type="email" id="send-email-email" placeholder="Your Email">
           </div>
           <div class="text-area-wrapper">
             <label for="send-email-message" aria-label="your message"></label>
             <textarea rows="10" placeholder="Type your message..." id="send-email-message"></textarea>
           </div>
           <div class="submit-form-wrapper">
-            <input type="checkbox" id="accept-copy">
-            <label for="accept-copy">Send a copy to my Email.</label>
+            <div class="checkbox-wrapper">
+              <input required type="checkbox" id="accept-copy">
+              <label for="accept-copy">Send a copy to my Email.</label>
+            </div>
             <button class="button button_submit" type="submit">Send Email</button>
           </div>
         </form>
       </div>
     </article>
-
     <article class="col">
       <h2 class="form-name">Sign In Form</h2>
       <div class="form-wrapper">
@@ -102,17 +104,19 @@
             <label for="sign-in-username">
               <span class="form-icon fas fa-user" aria-label="User name"></span>
             </label>
-            <input class="input" type="text" id="sign-in-username" placeholder="Username">
+            <input class="input" required type="text" id="sign-in-username" placeholder="Username">
           </div>
           <div class="input-wrapper">
             <label for="sign-in-password">
               <span class="form-icon fas fa-lock" aria-label="password"></span>
             </label>
-            <input class="input" type="text" id="sign-in-password" placeholder="Password">
+            <input class="input" required type="text" id="sign-in-password" placeholder="Password">
           </div>
           <div class="submit-form-wrapper">
-            <input type="checkbox" id="remember-email">
-            <label for="remember-email">Remember me</label>
+            <div class="checkbox-wrapper">
+              <input required type="checkbox" id="remember-email">
+              <label for="remember-email">Remember me</label>
+            </div>
             <button class="button button_submit button_small" type="submit">Sign in</button>
           </div>
         </form>
@@ -124,13 +128,13 @@
             <label for="recovery-email">
               <span class="form-icon fas fa-envelope" aria-label="Enter your Email"></span>
             </label>
-            <input class="input" type="text" id="recovery-email" placeholder="Enter your Email">
+            <input class="input" required type="email" id="recovery-email" placeholder="Enter your Email">
           </div>
           <div class="input-wrapper">
             <label for="recovery-phone">
               <span class="form-icon fas fa-mobile-alt" aria-label="Enter your Phone number"></span>
             </label>
-            <input class="input" type="text" id="recovery-phone" placeholder="Enter your Phone number">
+            <input class="input" required type="number" id="recovery-phone" placeholder="Enter your Phone number">
           </div>
           <div class="submit-form-wrapper">
             <button class="button button_submit button_small button_nomargin" type="submit">Send</button>
@@ -145,7 +149,7 @@
             <label for="subscribe-email">
               <span class="form-icon fas fa-envelope" aria-label="Enter your Email"></span>
             </label>
-            <input class="input" type="text" id="subscribe-email" placeholder="Enter your Email">
+            <input class="input" required type="email" id="subscribe-email" placeholder="Enter your Email">
           </div>
           <div class="submit-form-wrapper">
             <button class="button button_submit button_small button_nomargin" type="submit">Subscribe</button>
